@@ -146,7 +146,7 @@ byte-order mark** and confirm this in C2):
 
 ### M0 gate (decisions)
 
-Write `docs/spikes/M0-summary.md` and decide, with you: **C1** (stay on free signing or pay);
+Write `docs/spikes/M0-summary.md` and decide, with you: **C1** (what a reduced iPhone app looks like if free signing blocks something; paying is ruled out);
 **C3** (hoot on rung 1, or choose between the weaker notification hoot and the default alarm
 sound); **C4** (what the wake matrix proved, and the exact wording of WIN-4). If a result
 changes a requirement, `spec.md` is amended and re-accepted before M1 starts.
@@ -234,7 +234,7 @@ Every task lists the spec requirements it satisfies. Test files sit beside the c
 | `flutter_alarmkit` or Sideloadly behaves differently from the guides | Spike M0-B isolates it on a throwaway branch; the own-bridge path does not depend on it. |
 | The Xcode project cannot be edited from Windows | Resource and extension changes go through the Ruby script and the plugin's setup script, run on the macOS runner or by Dart. |
 | macOS runner minutes cost money on a private repo | Build the iPhone app only on demand (manual trigger and tags), not on every push. |
-| Weekly re-sign is forgotten | PLAT-3 banner, README routine; C1 gate decides on a paid account. |
+| Weekly re-sign is forgotten | PLAT-3 banner, README routine. No paid account (decision 17). |
 | Wake does not work on battery or lid closed | Documented limit; WIN-4 status explains the setting; ALM-9 handles late rings. |
 
 ## 9. Gaps found while planning (for your review)
@@ -255,4 +255,5 @@ These are things the spec did not settle. None changes a requirement without you
 |---|---|---|
 | 2026-11-11 | First draft | Spec accepted. |
 | 2026-11-11 | Plan accepted; ALM-7 clarified in the spec (gap G1) | Product-owner review. |
+| 2026-11-11 | No-spend decision (intent decision 17). Repo created as **public** (`Notabot1241/sleepy-owl-clock`, P0.8 done), so GitHub-hosted runners are free; commits use the GitHub no-reply email. CI job capped at 20 minutes. | Product owner: spend no money. |
 | 2026-11-11 | P0.1 to P0.3, P0.5 to P0.7, P0.9, P0.10 done. Flutter is 3.50.0 (plan said 3.38 or newer). Bundle ID is `app.owlnestd8f1e60e.sleepyOwl`. Flutter's iOS template here has a `SceneDelegate` and no Podfile, so task A2 registers the AlarmKit bridge where the template's engine is created (confirm when writing A2), not necessarily in `AppDelegate`. | Observed while scaffolding. P0.4 (Developer Mode) and P0.8 (GitHub repo) are still open. |

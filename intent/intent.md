@@ -4,7 +4,7 @@
 |---|---|
 | **Author** | Originator: _[add your name]_ (drafted with Claude) |
 | **Date** | 2026-11-11 |
-| **Status** | Accepted 2026-11-11; amended 2026-11-11 (decisions 12 to 16) |
+| **Status** | Accepted 2026-11-11; amended 2026-11-11 (decisions 12 to 17) |
 | **Next artifact** | `spec.md` (written only after this intent is accepted) |
 
 > Items marked **(assumed)** are my best reading of the idea, not something you said.
@@ -137,6 +137,7 @@ Success looks like:
 | 14 | Alarm time zones (spec concern C5) | Each alarm has a "Follow time zone" switch, on by default. On: uses the selected zone and moves with it. Off: pinned to the zone selected at creation. Refines decision 2. |
 | 15 | Windows alarms when closed (spec concern C4) | Also relaunch the app and wake the PC for alarms and timers through Windows Task Scheduler, where the hardware allows it. |
 | 16 | Hoot on iPhone (spec concern C3) | The hoot is required on iPhone alarms. If the system alarm API cannot play it, use a notification fallback that may be weaker on Silent mode, and decide again after the first iPhone test. |
+| 17 | No-spend constraint | No money is spent on this project: no paid Apple Developer account and no paid build minutes (the GitHub repo is public, so standard runners are free). If free signing blocks a feature, the iPhone app gets a reduced feature set instead. |
 
 ## Remaining questions for the spec to resolve
 
